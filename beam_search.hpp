@@ -1,22 +1,15 @@
 ﻿/*
-** (C) Copyright 广州孔确基因科技有限公司 All Rights Reserved.
-** Description：
+** Description：beam search are revised based on fast_ctc_decode(https://github.com/nanoporetech/fast-ctc-decode) following MIT license.
 ** Author：linlian
 ** Date:
 ** Modify Record:
 */
 
-#include <stddef.h>
-#include <stdint.h>
 #include <iostream>
 #include <algorithm>
-#include <stdio.h>
 #include <assert.h>
-#include <limits.h>
 #include <optional>
-#include <cstring>
 #include <vector>
-#include <cstdlib>
 
 using namespace std;
 
