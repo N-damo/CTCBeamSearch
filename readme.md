@@ -1,3 +1,10 @@
+# Introduction  
+
+CTCBeamSearch is a C++ header library meant for Connectionist Temporal Classification (CTC) decoding algorithms.  
+
+
+
+
 # Usage  
 
 ```C++
