@@ -23,7 +23,6 @@ const int ROOT_NODE = -1;
 template<typename T>
 void truncate_beam(vector<T>& beam, size_t beam_size)
 {
-	//cout << "beam size" << beam_size << endl;
 	if (beam.size() > beam_size)
 	{
 		beam.resize(beam_size);
@@ -104,7 +103,6 @@ public:
 
 	SuffixTree(size_t alphabet_size) :alphabet_size(alphabet_size)
 	{
-		//this->root_children = { -1,alphabet_size };
 		for (int i = 0; i < alphabet_size; i++)
 		{
 			this->root_children.push_back(-1);
@@ -126,12 +124,10 @@ public:
 
 	optional<int> get_child(int node, size_t label)
 	{
-		//print_vector(cout, root_children, ",");
-		//cout <<"root children"<< endl;
+
 		if (node == ROOT_NODE)
 		{
 			auto idx = this->root_children[label];
-			//cout << "get child:" << idx << endl;
 			if (idx >= 0)
 			{
 				return idx;
