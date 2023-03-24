@@ -1,6 +1,6 @@
-### Usage
+# Usage  
 
-```
+```C++
 
 #include "beam_search.hpp"
 #include <random>
@@ -48,7 +48,7 @@ int main()
 ```
 
 
-### Licence and Copyright
+# Licence and Copyright  
 
 
 CTCBeamSearch are revised based on fast_ctc_decode following MIT license. If a copy of the License was not distributed with this file, You can obtain one at https://github.com/nanoporetech/fast-ctc-decode/
