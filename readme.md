@@ -48,9 +48,18 @@ int main()
 	auto endtime = (double)(end - start) / CLOCKS_PER_SEC;
 	cout << "Time:" << endtime * 1000000 << " us" << endl;
 
-	cout << r.first << endl;
+	if(r.first.size() != 0);
+	{
+		cout << r.first << endl;
+		for (auto& d : r.second)
+		{
+			printf("%d,", d);
+		}
+		cout << endl;
+	}
 	return 0;
 }
+
 
 ```
 
