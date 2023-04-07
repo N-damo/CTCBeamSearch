@@ -5,8 +5,8 @@
 ** Modify Record:
 */
 
-#ifndef BEAM_SEARCH_HPP
-#define BEAM_SEARCH_HPP
+#ifndef BEAM_SEARCH_HPP_
+#define BEAM_SEARCH_HPP_
 #include <iostream>
 #include <algorithm>
 #include <assert.h>
@@ -185,14 +185,16 @@ public:
 
 };
 
-bool compareByNode(const SearchPoint& a, const SearchPoint& b)
+
+template<typename T>
+bool compareByNode(const T& a, const T& b)
 {
 	return a.node < b.node;
 }
 
 
-
-void beam_search(const float* network_output, const int n_steps_in,
+template<typename T>
+void beam_search(const T* network_output, const int n_steps_in,
 	const string& alphabet,
 	size_t beam_size,
 	float beam_cut_threshold,
@@ -290,7 +292,7 @@ void beam_search(const float* network_output, const int n_steps_in,
 		}
 		std::swap(beam, next_beam);
 		const int DELETE_MARKER = INT_MIN;
-		std::sort(beam.begin(), beam.end(), compareByNode);
+		std::sort(beam.begin(), beam.end(), compareByNode<SearchPoint>);
 		int last_key = DELETE_MARKER;
 		int last_key_pos = 0;
 		auto beam_n = beam.size();
