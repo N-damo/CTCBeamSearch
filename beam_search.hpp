@@ -5,6 +5,7 @@
 ** Modify Record:
 */
 
+#pragma once
 #include <iostream>
 #include <algorithm>
 #include <assert.h>
