@@ -5,7 +5,8 @@
 ** Modify Record:
 */
 
-#pragma once
+#ifndef BEAM_SEARCH_HPP
+#define BEAM_SEARCH_HPP
 #include <iostream>
 #include <algorithm>
 #include <assert.h>
@@ -374,3 +375,5 @@ void beam_search(const float* network_output, const int n_steps_in,
 	swap(r.second, path);
 	return;
 }
+
+#endif
